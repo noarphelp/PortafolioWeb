@@ -1,0 +1,48 @@
+import { Component } from '@angular/core';
+import emailjs, { EmailJSResponseStatus } from 'emailjs-com';
+
+@Component({
+  selector: 'app-contacto',
+  imports: [],
+  templateUrl: './contacto.component.html',
+  styleUrl: './contacto.component.css'
+})
+export class ContactoComponent {
+
+  enviado = false;
+  error = false;
+
+  constructor() {}
+
+  toastMessage: string | null = null;
+  toastType: 'success' | 'error' = 'success';
+
+  onSubmit(e: Event) {
+    e.preventDefault(); // evitar refresco de página
+    const form = e.target as HTMLFormElement;
+
+    emailjs.sendForm(
+  '', // SERVICE_ID vacío
+  '', // TEMPLATE_ID vacío
+  form,
+  ''  // PUBLIC_KEY vacío
+)
+    .then(() => {
+      this.showToast('✅ Tu mensaje ha sido enviado correctamente.', 'success');
+      form.reset();
+    })
+    .catch(() => {
+      this.showToast('❌ Ocurrió un error al enviar el mensaje.', 'error');
+    });
+  }
+
+  showToast(message: string, type: 'success' | 'error') {
+    this.toastMessage = message;
+    this.toastType = type;
+
+    // Oculta el toast después de 3 segundos
+    setTimeout(() => {
+      this.toastMessage = null;
+    }, 3000);
+  }
+}

@@ -1,0 +1,133 @@
+.presentacion {
+    background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .7)), url("/img/fondoPrincipal.jpg");
+    background-size: cover;
+    height: 100vh;
+    height: 100vh;
+    margin: auto;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.presentacion .bienvenida{
+    font-size: 30px;
+    margin-bottom: 0px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    text-shadow: 0px 0px 10px white,
+                 0px 0px 20px white;
+}
+
+.presentacion h2{
+    font-size: 45px;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.presentacion span{
+    font-size: 25px;
+    color: red;
+}
+
+.presentacion .descripcion{
+    max-width: 700px;
+    margin: 25px auto;
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 0px;
+    text-shadow: 0px 0px 5px rgb(217, 36, 196),
+                 0px 0px 10px white;
+}
+
+.presentacion a{
+    text-decoration: none;
+    display: inline-block;
+    margin: 25px;
+    padding: 20px 25px;
+    border: 2px solid #fff;
+    border-radius: 50px;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: .5s;
+}
+
+.presentacion a:hover{
+    background-color: red;
+}
+
+/* Bloque de skills dentro de .presentacion */
+.presentacion .skills {
+  margin-top: 20px;
+  margin-left: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+  gap: 40px;
+  justify-items: center;
+  align-items: center;
+  max-width: 800px;
+  width: 60%;
+  box-shadow: 0 0 80px #ee82f07f;
+  border-radius: 20px;
+  
+}
+
+.presentacion .skills i,
+.presentacion .skills img {
+  font-size: 5rem;
+  width: 55px;
+  height: 85px;
+  object-fit: contain;
+  cursor: pointer;
+  /* Animación flotante */
+  animation: float 3s ease-in-out infinite;
+  transition: transform 0.4s ease, filter 0.4s ease;
+   filter: invert(63%) sepia(44%) saturate(415%) hue-rotate(169deg) brightness(92%) contrast(92%);
+}
+
+/* Efecto hover: giro leve + brillo */
+.presentacion .skills i:hover,
+.presentacion .skills img:hover {
+  transform: scale(1.2) rotate(-15deg);
+  filter: drop-shadow(0 0 12px rgba(224, 43, 166, 1.5));
+}
+
+/* Animación flotante suave */
+@keyframes float-smooth {
+   0%   { transform: translateY(0px); }
+  25%  { transform: translateY(-10px); }
+  50%  { transform: translateY(0px); }
+  75%  { transform: translateY(10px); }
+  100% { transform: translateY(0px); }
+}
+.my-element {
+  animation: float-smooth 4s cubic-bezier(0.445, 0.05, 0.55, 0.95) infinite;
+
+}
+
+/* Colores específicos para los íconos de SimpleIcons */
+.presentacion .skills img[alt="SonarQube"] {
+  filter: invert(63%) sepia(44%) saturate(415%) hue-rotate(169deg) brightness(92%) contrast(92%);
+  
+}
+.presentacion .skills img[alt="SonarQube"]:hover {
+  filter: invert(63%) sepia(54%) saturate(415%) hue-rotate(169deg) brightness(42%) contrast(42%)
+          drop-shadow(0 0 22px rgba(224, 43, 166, 1.5));
+}
+
+.presentacion .skills img[alt="VS Code"] {
+  filter: invert(38%) sepia(94%) saturate(1522%) hue-rotate(179deg) brightness(95%) contrast(94%);
+}
+.presentacion .skills img[alt="VS Code"]:hover {
+  filter: invert(63%) sepia(44%) saturate(415%) hue-rotate(169deg) brightness(92%) contrast(92%)
+          drop-shadow(0 0 22px rgba(224, 43, 166, 1.5));
+}
+
+
+
+
+
+
+

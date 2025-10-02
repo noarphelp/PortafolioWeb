@@ -1,0 +1,99 @@
+#contacto {
+    padding: 100px 15px;
+    background-color: #f3f3f3;
+    background: linear-gradient(aqua, blueviolet,  cornflowerblue, indigo), url("/img/fondo-contacto.webp");
+}
+
+#contacto .titulo-seccion {
+    margin-bottom: 20px;
+}
+
+#contacto .contenedor-form {
+    max-width: 1100px;
+    margin: auto;
+}
+
+#contacto .contenedor-form .fila {
+    margin-bottom: 15px;
+}
+
+#contacto .contenedor-form .mitad {
+    display: flex;
+    justify-content: space-between;
+}
+
+#contacto .contenedor-form input,
+#contacto .contenedor-form textarea {
+    padding: 20px;
+    border-radius: 20px;
+    border: none;
+    border: 1px solid #919191;
+}
+
+#contacto .contenedor-form .mitad input {
+    width: 48%;
+}
+
+#contacto .contenedor-form .input-full {
+    width: 100%;
+}
+
+#contacto .titulo-seccion {
+    text-align: center;
+    font-size: 22px;
+    text-transform: uppercase;
+    color: #111135;
+    text-decoration: underline;
+    text-decoration-color: #d3d3d3;
+    text-decoration-thickness: 5px;
+}
+
+#contacto .btn-enviar {
+    display: block;
+    margin: auto;
+    cursor: pointer;
+    transition: .5s;
+    padding: 10px 15px !important;
+}
+
+#contacto .btn-enviar:hover {
+    background-color: red;
+    color: #fff;
+}
+
+.toast {
+position: fixed;
+  top: 120px;                
+  left: 50%;                
+  transform: translateX(-50%);
+  padding: 10px 20px;        
+  border-radius: 8px;
+  color: #fff;
+  font-weight: bold;
+  z-index: 1000;
+  opacity: 0.95;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  animation: fadeInOut 3s forwards;
+
+  display: inline-block;      
+  max-width: 90%;             
+  text-align: center;        
+  white-space: nowrap;   
+}
+
+.toast.success {
+  background-color: #28a745;
+}
+
+.toast.error {
+  background-color: #dc3545;
+}
+
+@keyframes fadeInOut {
+  0% { opacity: 0; transform: translateY(20px); }
+  10%, 90% { opacity: 0.95; transform: translateY(0); }
+  100% { opacity: 0; transform: translateY(20px); }
+}
+
+
+

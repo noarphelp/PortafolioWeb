@@ -1,0 +1,84 @@
+#sobreMi {
+    background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .7)), url("/img/fondoPrincipal.jpg");
+    height: 100vh;
+    height: 100vh;
+    margin: auto;
+    padding: 100px 15px;
+    color: #f2ecec;
+    display: flex;
+    
+}
+
+.contenedor-foto {
+    padding-top: 100px;
+    max-width: 400px;
+    margin-right: 80px;
+    margin-left: 50px;
+}
+
+.contenedor-foto img{
+    padding: 6px;
+    width: 400px;
+    border-radius:50%;
+    background-color: #ee82f028;
+    box-shadow: 0 0 50px #ee82f07e;
+}
+.contenedor-foto img:hover{
+    opacity: 0.9;
+}
+
+.sobreMi{
+    margin: 0 40px;
+    
+}
+
+.titulo-seccion{
+    font-size: 70px;
+    text-transform: uppercase;
+    color: #f2ecec;
+    text-decoration: underline;
+    text-decoration-color: #d3d3d3;
+    text-decoration-thickness: 5px;
+}
+
+.sobreMi h2{
+    font-size: 32px;
+    font-weight: bold;
+    margin: 20px 0;
+    letter-spacing: 2px;
+}
+
+#sobreMi .sobreMi h2 span{
+    color: red;
+}
+
+#sobreMi .sobreMi h3{
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+#sobreMi .sobreMi p{
+    font-size: 18px;
+    line-height: 25px;
+    color: #f2ecec;
+    margin-bottom: 12px;
+}
+
+#sobreMi .sobreMi a{
+    display: inline-block;
+    text-decoration: none;
+    color: #f2ecec;
+    border-radius: 30px;
+    padding: 10px 20px;
+    border: 1px solid #000;
+    margin-top: 30px;
+    transition: .5s;
+}
+
+#sobreMi .sobreMi a:hover{
+    background-color: rgba(197, 71, 235, 0.455);
+    color: #fff;
+}

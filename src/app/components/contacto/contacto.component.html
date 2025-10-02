@@ -1,0 +1,27 @@
+<section id="contacto">
+  <h3 class="titulo-seccion">Contáctame</h3>
+  <div class="contenedor-form">
+    <form (submit)="onSubmit($event)">
+      <div class="fila mitad">
+        <input type="text" name="nombre" placeholder="Nombre Completo *" class="input-mitad" required>
+        <input type="email" name="email" placeholder="Dirección de Email *" class="input-mitad" required>
+      </div>
+      <div class="fila">
+        <input type="text" name="asunto" placeholder="Asunto" class="input-full">
+      </div>
+      <div class="fila">
+        <textarea name="mensaje" cols="30" rows="10" placeholder="Tu Mensaje..." class="input-full" required></textarea>
+      </div>
+      <input type="submit" value="Enviar Mensaje" class="btn-enviar">
+    </form>
+
+    <!-- Mensajes de feedback -->
+   @if (toastMessage) {
+    <div class="toast" [class.success]="toastType === 'success'" [class.error]="toastType === 'error'">
+      {{toastMessage}}
+    </div>
+  }
+
+  </div>
+</section>
+
