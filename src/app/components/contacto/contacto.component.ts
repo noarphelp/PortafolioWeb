@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import emailjs from '@emailjs/browser';
-import { environment } from '../../../environments/environment';
+import { environment } from '../../../environments/environment.prod';
 
 @Component({
   selector: 'app-contacto',
