@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import emailjs, { EmailJSResponseStatus } from 'emailjs-com';
+import { environment } from '../../../environments/environment.prod';
 
 @Component({
   selector: 'app-contacto',
@@ -22,10 +23,10 @@ export class ContactoComponent {
     const form = e.target as HTMLFormElement;
 
     emailjs.sendForm(
-  '', // SERVICE_ID vacío
-  '', // TEMPLATE_ID vacío
-  form,
-  ''  // PUBLIC_KEY vacío
+ environment.emailServiceId,
+      environment.emailTemplateId,
+      form,
+      environment.emailPublicKey
 )
     .then(() => {
       this.showToast('✅ Tu mensaje ha sido enviado correctamente.', 'success');
