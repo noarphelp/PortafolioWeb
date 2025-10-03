@@ -1,6 +1,6 @@
 export const environment = {
-  production: false,
-  emailServiceId: '',
-  emailTemplateId: '',
-  emailPublicKey: ''
+  production: true,
+  emailServiceId: "service_wfjtz131",
+  emailTemplateId: "template_gqgl71u",
+  emailPublicKey: "FlyDvhwboQ-MwtKg2"
 };
