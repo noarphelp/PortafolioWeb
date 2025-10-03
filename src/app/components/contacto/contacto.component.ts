@@ -22,6 +22,7 @@ export class ContactoComponent {
     e.preventDefault(); // evitar refresco de página
     const form = e.target as HTMLFormElement;
 
+
     emailjs.sendForm(
  environment.emailServiceId,
       environment.emailTemplateId,
