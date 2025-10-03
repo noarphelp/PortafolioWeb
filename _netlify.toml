@@ -1,12 +1,9 @@
-# Configuración de build de Netlify
 [build]
-  # Carpeta donde se generan los archivos de Angular después de build
   publish = "dist/proyecto-angular"
-  # Comando para generar environment.prod.ts y build de Angular
   command = "node set-env.js && ng build --configuration production"
 
-# Redirección para Single Page Application (SPA)
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
+
