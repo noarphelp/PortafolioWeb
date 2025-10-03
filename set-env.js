@@ -13,6 +13,6 @@ const envConfigFile = `export const environment = {
 };
 `;
 
-fs.writeFileSync('./src/environments/environment.ts', envConfigFile);
+fs.writeFileSync('./src/environments/environment.prod.ts', envConfigFile);
 console.log('✅ environment.prod.ts generado con variables de Netlify');
 
