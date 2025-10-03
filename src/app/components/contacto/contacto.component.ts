@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import emailjs, { EmailJSResponseStatus } from 'emailjs-com';
+import emailjs from '@emailjs/browser';
 import { environment } from '../../../environments/environment';
 
 @Component({
@@ -22,7 +22,7 @@ export class ContactoComponent {
     e.preventDefault(); // evitar refresco de página
     const form = e.target as HTMLFormElement;
 
-
+ console.log('Variables de EmailJS:', environment); // Verifica que se leen correctamente
     emailjs.sendForm(
  environment.emailServiceId,
       environment.emailTemplateId,
@@ -34,6 +34,7 @@ export class ContactoComponent {
       form.reset();
     })
     .catch(() => {
+      console.error('Error EmailJS:', this.error); // <-- esto te ayudará a ver errores en producción
       this.showToast('❌ Ocurrió un error al enviar el mensaje.', 'error');
     });
   }
