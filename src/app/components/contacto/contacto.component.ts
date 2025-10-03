@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import emailjs from '@emailjs/browser';
+import emailjs, { EmailJSResponseStatus } from 'emailjs-com';
 import { environment } from '../../../environments/environment.prod';
 
 @Component({
