@@ -9,7 +9,7 @@ import { environment } from '../../../environments/environment.prod';
   styleUrl: './contacto.component.css'
 })
 export class ContactoComponent {
-
+//definición de variables
   enviado = false;
   error = false;
 
