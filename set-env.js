@@ -1,9 +1,9 @@
 const fs = require('fs');
 
-console.log("🔍 Variables de entorno leídas por Netlify:");
-console.log("EMAIL_SERVICE_ID:", process.env.EMAIL_SERVICE_ID);
-console.log("EMAIL_TEMPLATE_ID:", process.env.EMAIL_TEMPLATE_ID);
-console.log("EMAIL_PUBLIC_KEY:", process.env.EMAIL_PUBLIC_KEY);
+if (!process.env.EMAIL_SERVICE_ID || !process.env.EMAIL_TEMPLATE_ID || !process.env.EMAIL_PUBLIC_KEY) {
+  console.error("❌ Faltan variables de entorno. Asegúrate de configurarlas en Render.");
+  process.exit(1);
+}
 
 const envConfigFile = `export const environment = {
   production: true,
@@ -14,5 +14,6 @@ const envConfigFile = `export const environment = {
 `;
 
 fs.writeFileSync('./src/environments/environment.prod.ts', envConfigFile);
-console.log('✅ environment.prod.ts generado con variables de Netlify');
+console.log('✅ environment.prod.ts generado con variables de Render');
+
 
